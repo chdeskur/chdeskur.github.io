@@ -1,0 +1,47 @@
+header {
+    font: 18px "Times New Roman";
+    text-align: center;
+  }
+  
+  body {
+    background-color: lightblue;
+  }
+  
+  .checkboxes {
+    font: 16px "Times New Roman";
+    margin: .5rem auto;
+  }
+  
+  .button {
+    font: 16px "Times New Roman";
+    width: 150px;
+    margin: .5rem auto;
+    padding: .5rem;
+    border: none;
+    border-radius: .25rem;
+    
+    &.calculate-score {
+      background-color: lightslategray;
+      &:hover {
+        background-color: lighten(lightslategray, 10%);
+      }
+    }
+    &.uncheck-all {
+      background-color: lightslategray;
+      &:hover {
+        background-color: lighten(lightslategray, 10%);
+      }
+    }
+  }
+  
+  .results {
+    font: 20px "Times New Roman";
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .number {
+    font: 36px "Times New Roman";
+    font-weight: bolder;
+    color: red;
+  }
