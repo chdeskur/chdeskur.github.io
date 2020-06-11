@@ -1,7 +1,7 @@
 $(function() {
     $('.calculate-score').on('click', function() {
       $('#results').prepend("Your Score:");
-      $('#number').append($('.checkboxes input:checkbox:checked').length);
+      $('#number').append(100 - $('.checkboxes input:checkbox:checked').length);
       $('p').empty();
       var table = document.getElementById('table');
       table.parentNode.removeChild(table);
