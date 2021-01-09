@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/chdeskur.github.io/static/js/main.813d5f4c.chunk.js",
+    "main.js.map": "/chdeskur.github.io/static/js/main.813d5f4c.chunk.js.map",
+    "runtime-main.js": "/chdeskur.github.io/static/js/runtime-main.9ce425c7.js",
+    "runtime-main.js.map": "/chdeskur.github.io/static/js/runtime-main.9ce425c7.js.map",
+    "static/js/2.49086dd8.chunk.js": "/chdeskur.github.io/static/js/2.49086dd8.chunk.js",
+    "static/js/2.49086dd8.chunk.js.map": "/chdeskur.github.io/static/js/2.49086dd8.chunk.js.map",
+    "index.html": "/chdeskur.github.io/index.html",
+    "precache-manifest.ff3b2fae127c6779e5069aa5d07c1196.js": "/chdeskur.github.io/precache-manifest.ff3b2fae127c6779e5069aa5d07c1196.js",
+    "service-worker.js": "/chdeskur.github.io/service-worker.js",
+    "static/js/2.49086dd8.chunk.js.LICENSE.txt": "/chdeskur.github.io/static/js/2.49086dd8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ce425c7.js",
+    "static/js/2.49086dd8.chunk.js",
+    "static/js/main.813d5f4c.chunk.js"
+  ]
+}
