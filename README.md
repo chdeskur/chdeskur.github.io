@@ -1,6 +1,17 @@
-# catherinedeskur
-My Personal Website
+# Catherine Deskur
 
-_Deployed using GitHub Pages_
+Personal website.
 
-Base template provided by [Theme Wagon](https://themewagon.com/themes/johndoe-free-one-page-portfolio-website-template/)
+## Preview locally
+
+Open `index.html` directly in a browser, or run a local server:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit http://localhost:8000
+
+## Deploy
+
+Hosted via GitHub Pages at [chdeskur.github.io](https://chdeskur.github.io)
