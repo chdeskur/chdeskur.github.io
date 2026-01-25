@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   background: #fff;
   color: #000;
   line-height: 1.6;
@@ -36,11 +36,10 @@ nav {
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 400;
   color: #000;
   text-decoration: none;
-  letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -56,7 +55,8 @@ nav {
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #000;
 }
 
@@ -67,9 +67,9 @@ main {
   padding: 0 2rem;
 }
 
-/* Hero section */
+/* Hero section (homepage) */
 .hero {
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,9 +77,9 @@ main {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  letter-spacing: -2px;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -1px;
   margin-bottom: 0.5rem;
   line-height: 1.1;
 }
@@ -90,67 +90,136 @@ main {
   font-weight: 300;
 }
 
-/* Sections */
-.section {
-  padding: 6rem 0;
+/* Home links */
+.home-links {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid #eee;
 }
 
-.section h2 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #999;
-  margin-bottom: 2rem;
-}
-
-.content > p {
-  font-size: 1.25rem;
-  color: #333;
-  max-width: 600px;
-  margin-bottom: 3rem;
-  font-weight: 300;
-}
-
-/* Items grid */
-.items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-}
-
-.item h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.item p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-/* Contact */
-.contact-links {
+.home-link {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.contact-links a {
-  color: #000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
   text-decoration: none;
-  font-size: 1rem;
-  border-bottom: 1px solid #000;
-  display: inline-block;
-  width: fit-content;
+  color: #000;
   transition: opacity 0.2s;
 }
 
-.contact-links a:hover {
+.home-link:hover {
   opacity: 0.6;
+}
+
+.home-link-title {
+  font-size: 1.25rem;
+}
+
+.home-link-arrow {
+  font-size: 1.25rem;
+  color: #999;
+}
+
+/* Page header (subpages) */
+.page-header {
+  padding: 8rem 0 3rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* Work list */
+.work-item {
+  border-bottom: 1px solid #eee;
+}
+
+.work-item:first-child {
+  border-top: 1px solid #eee;
+}
+
+.work-header {
+  width: 100%;
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.work-header:hover .work-title {
+  color: #666;
+}
+
+.work-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.work-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000;
+  transition: color 0.2s;
+}
+
+.work-date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.work-group {
+  margin-bottom: 2.5rem;
+}
+
+.work-group:last-child {
+  margin-bottom: 0;
+}
+
+.work-group-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #bbb;
+  margin: 0 0 0.5rem 0;
+}
+
+.work-toggle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #999;
+  transition: transform 0.3s;
+}
+
+.work-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.work-details > p {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0 0 0;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.work-item.open .work-details {
+  grid-template-rows: 1fr;
+}
+
+.work-item.open .work-details > p {
+  padding: 0 0 1.5rem 0;
 }
 
 /* Footer */
@@ -159,6 +228,7 @@ footer {
   margin: 0 auto;
   padding: 3rem 2rem;
   border-top: 1px solid #eee;
+  margin-top: 4rem;
 }
 
 footer p {
@@ -170,24 +240,18 @@ footer p {
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
-    letter-spacing: -1px;
   }
 
   .tagline {
     font-size: 1.1rem;
   }
 
-  .items {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .section {
-    padding: 4rem 0;
-  }
-
   .nav-links {
     gap: 1.5rem;
+  }
+
+  .page-header {
+    padding: 7rem 0 2rem;
   }
 }
 
@@ -202,6 +266,10 @@ footer p {
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
   }
 
   footer {
