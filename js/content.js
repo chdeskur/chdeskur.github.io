@@ -4,9 +4,9 @@ const content = {
   tech: {
     upcoming: [
       {
-        title: "[Event/Talk/Launch]",
-        date: "March 2025",
-        details: "[What's happening, where, any links]"
+        title: "Harvard Start Up Fair",
+        date: "February 13, 2026",
+        details: "Recruiting for Fern"
       }
     ],
     past: [
@@ -26,16 +26,16 @@ const content = {
   music: {
     upcoming: [
       {
-        title: "[Show/Release]",
-        date: "Feb 15, 2025",
-        details: "[Venue, time, ticket link]"
+        title: "Mendelssohn Symphony No. 4",
+        date: "January 31, 2026",
+        details: "Binghamton Philharmonic"
       }
     ],
     past: [
       {
-        title: "[Show/Recording/Collaboration]",
-        date: "2024",
-        details: "[What happened, who was involved, links to listen]"
+        title: "In Abeyance",
+        date: "January 22, 2026",
+        details: "Mise-En-Place"
       },
       {
         title: "[Album/EP release]",
