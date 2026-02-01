@@ -1,10 +1,32 @@
 // Render content and handle interactions
 (function() {
+  function isDatePast(dateString) {
+    const eventDate = new Date(dateString);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return eventDate < today;
+  }
+
+  function categorizeEvents(events) {
+    const upcoming = [];
+    const past = [];
+
+    events.forEach(event => {
+      if (isDatePast(event.date)) {
+        past.push(event);
+      } else {
+        upcoming.push(event);
+      }
+    });
+
+    return { upcoming, past };
+  }
+
   function renderSection(sectionName) {
     const container = document.querySelector(`[data-section="${sectionName}"]`);
     if (!container || !content[sectionName]) return;
 
-    const { upcoming, past } = content[sectionName];
+    const { upcoming, past } = categorizeEvents(content[sectionName]);
 
     // Render upcoming
     if (upcoming && upcoming.length > 0) {
