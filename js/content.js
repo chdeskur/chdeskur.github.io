@@ -21,6 +21,11 @@ const content = {
 
   music: [
     {
+      title: "Beethoven Symphony No. 9",
+      date: "March 28, 2026",
+      details: "Binghamton Philharmonic"
+    },
+    {
       title: "Mendelssohn Symphony No. 4",
       date: "January 31, 2026",
       details: "Binghamton Philharmonic"
